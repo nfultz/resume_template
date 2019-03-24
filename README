@@ -1,6 +1,28 @@
-# My Resume
+# Resume Template
 
-Convert Markdown to HTML, use headless chrome to render w/ style.css and print to pdf.
+
+This resume template is written in markdown. Markdown is easy to write and
+is well-supported by github.
+
+
+## Manual build
+
+Run `markdown resume.md >resume.html`, then open the resulting html file in
+firefox or chrome, and print it out.
+
+## Auto build
+
+This depends on the `chrome-headless-render-pdf` node package.
+
+Once you have that, run
+
+`make`
+
+It will convert the Markdown to HTML, use headless chrome to render w/ style.css and print to pdf, and clean up on exit.
+
+## Styling
+
+Edit `style.css` and adjust as needed. Note the `print selectors` at the bottom.
 
 Can use
 
@@ -10,4 +32,9 @@ Can use
 
 to force a page break.
 
-Also use AWS CodeBuild to generate the pdf and archive to S3 for each branch.
+## DevOps
+
+  Also use AWS CodeBuild to generate the pdf and archive to S3 for each branch. Be sure
+to enable SemVer on the artifacts for that feature to work. I recommend one branch / job application, with
+the branch name being the company name.
+
