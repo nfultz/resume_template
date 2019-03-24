@@ -1,0 +1,13 @@
+# My Resume
+
+Convert Markdown to HTML, use headless chrome to render w/ style.css and print to pdf.
+
+Can use
+
+```
+<div class=break></div>
+```
+
+to force a page break.
+
+Also use AWS CodeBuild to generate the pdf and archive to S3 for each branch.

@@ -1,0 +1,57 @@
+body {
+  font-family: serif;
+  color: #303030;
+  width: 720px;
+  font-size: 10pt;
+}
+
+h1, h2, h3 {
+  font-family: sans-serif;
+  margin: 0;
+  page-break-after: avoid;
+}
+
+h1 {
+  margin-bottom: .5em;
+  border-bottom: dotted;
+}
+
+h2, h3{
+  margin-left: 32px;
+}
+
+ul,p {
+  list-style: none;
+  padding-left: 4em;
+  text-indent: -1.5em;
+  page-break-inside: avoid;
+  page-break-before: avoid;
+  width: 86%;
+  text-align: justify;
+}
+
+h3 + ul {
+  margin-top: .5em;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+@media print {
+    .break {
+        page-break-before: always;
+        margin-top: 1.6cm;
+    }
+}
+
+@media screen {
+    body {
+        margin-left: 32px;
+    }
+}
